@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Happy Birthday!</title>
+</head>
+<body>
+  <div class="card">
+    <img src="6.gif" alt="birthday" class="birthday">
+    <div class="text">
+      <h1 class="animate-text">Happy Birthday!</h1>
+      <p class="animate-text">I hope you have a wonderful birthday</p>
+      <p class="muted animate-text">- Sila Chadlli</p>
+      <button id="playButton"class="io" style="padding: 10px 20px; font-size: 16px;">Start Music</button>
+    </div>
+    <div class="space"></div>
+  </div>
+
+  <audio id="birthdaySong" src="6.mp3"></audio>
+
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      var audio = document.getElementById("birthdaySong");
+      audio.play().then(function() {
+        console.log("Music is playing");
+        document.getElementById('playButton').style.display = 'none'; // إخفاء الزر بعد النقر
+      }).catch(function(error) {
+        console.log("Audio could not be played due to browser policies.");
+      });
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    * {
+      transition: all 0.2s ease-in-out;
+    }
+
+    body {
+      background: #303333;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .io {
+      margin-top: 15px;
+      border: none;
+      border-radius: 20px;
+      background: #F42929;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      animation: buttonColor 4s ease-in-out infinite;
+    }
+
+    .io:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes buttonColor {
+      0% { background-color: #F42929; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Happy Birthday!</title>
+</head>
+<body>
+  <div class="card">
+    <img src="6.gif" alt="birthday" class="birthday">
+    <div class="text">
+      <h1 class="animate-text">Happy Birthday!</h1>
+      <p class="animate-text">I hope you have a wonderful birthday</p>
+      <p class="muted animate-text">- Sila Chadlli</p>
+      <button id="playButton"class="io" style="padding: 10px 20px; font-size: 16px;">Start Music</button>
+    </div>
+    <div class="space"></div>
+  </div>
+
+  <audio id="birthdaySong" src="6.mp3"></audio>
+
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      var audio = document.getElementById("birthdaySong");
+      audio.play().then(function() {
+        console.log("Music is playing");
+        document.getElementById('playButton').style.display = 'none'; // إخفاء الزر بعد النقر
+      }).catch(function(error) {
+        console.log("Audio could not be played due to browser policies.");
+      });
+    });
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    * {
+      transition: all 0.2s ease-in-out;
+    }
+
+    body {
+      background: #303333;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .io {
+      margin-top: 15px;
+      border: none;
+      border-radius: 20px;
+      background: #F42929;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      animation: buttonColor 4s ease-in-out infinite;
+    }
+
+    .io:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes buttonColor {
+      0% { background-color: #F42929; }
+      25% { background-color: #F4E409; }
+      50% { background-color: #4CAF50; }
+      75% { background-color: #2196F3; }
+      100% { background-color: #F42929; }
+    }
+
+    .card {
+      background: #fdfdfd;
+      border-radius: 4px;
+      height: 70vh;
+      width: 80vw;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      .card {
+        flex-direction: row-reverse;
+      }
+      .card img.birthday {
+        width: 100%;
+        max-width: 50vw;
+        max-height: unset;
+      }
+    }
+
+    @media only screen and (max-height: 640px) {
+      .card {
+        flex-direction: row-reverse;
+      }
+      .card img.birthday {
+        width: 100%;
+        max-width: 50vw;
+        max-height: unset;
+      }
+    }
+
+    img.birthday {
+      max-height: 40vh;
+    }
+
+    .text {
+      padding: 1em;
+    }
+
+    .muted {
+      opacity: 0.8;
+    }
+
+    .space {
+      height: 100px;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    }
+
+    .animate-text {
+      animation: slideIn 2s ease-in-out forwards;
+    }
+  </style>
+</body>
+</html>￼Enter      25% { background-color: #F4E409; }
+      50% { background-color: #4CAF50; }
+      75% { background-color: #2196F3; }
+      100% { background-color: #F42929; }
+    }
+
+    .card {
+      background: #fdfdfd;
+      border-radius: 4px;
+      height: 70vh;
+      width: 80vw;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+      overflow: hidden;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      .card {
+        flex-direction: row-reverse;
+      }
+      .card img.birthday {
+  width: 100%;
+        max-width: 50vw;
+        max-height: unset;
+      }
+    }
+
+    @media only screen and (max-height: 640px) {
+      .card {
+        flex-direction: row-reverse;
+      }
+      .card img.birthday {
+        width: 100%;
+        max-width: 50vw;
+        max-height: unset;
+      }
+    }
+
+    img.birthday {
+      max-height: 40vh;
+    }
+
+    .text {
+      padding: 1em;
+    }
+
+    .muted {
